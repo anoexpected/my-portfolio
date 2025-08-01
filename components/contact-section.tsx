@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import { Send, CheckCircle, AlertCircle, Mail, Phone, Linkedin, Github, Twitter } from "lucide-react"
+import { Mail, Phone, Linkedin, Github, Twitter } from "lucide-react"
 
 // Placeholder for useInView hook if not available in this context
 const useInView = (threshold: number = 0.1) => {
@@ -14,18 +14,20 @@ const useInView = (threshold: number = 0.1) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          if (ref.current) observer.unobserve(ref.current);
+          const currentRef = ref.current;
+          if (currentRef) observer.unobserve(currentRef);
         }
       },
       { threshold }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) observer.unobserve(currentRef);
       observer.disconnect();
     };
   }, [threshold]);
@@ -36,39 +38,14 @@ const useInView = (threshold: number = 0.1) => {
 
 const ContactSection = () => {
   const [contactInViewRef, contactInView] = useInView(0.3)
-  // Removed form-related state as the form is being removed
-  // const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
-  // const [formData, setFormData] = useState({ name: "", email: "", message: "" })
-
-  // Removed handleSubmit function as the form is being removed
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault()
-  //   setFormStatus("loading")
-
-  //   try {
-  //     await new Promise((resolve) => setTimeout(resolve, 1500))
-  //     const success = Math.random() > 0.1
-  //     if (success) {
-  //       setFormStatus("success")
-  //       setFormData({ name: "", email: "", message: "" })
-  //     } else {
-  //       setFormStatus("error")
-  //     }
-  //   } catch (error) {
-  //     console.error("Form submission error:", error)
-  //     setFormStatus("error")
-  //   } finally {
-  //     setTimeout(() => setFormStatus("idle"), 3000)
-  //   }
-  // }
 
   return (
     <section id="contact" className="py-16 md:py-20 bg-[#191970] text-white">
       <div ref={contactInViewRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 md:mb-16 ${contactInView ? "animate-fade-in-up" : "opacity-0"}`}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Let's Connect</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Let&apos;s Connect</h2>
           <p className="text-lg md:text-xl text-gray-300">
-            I'm open to internships, collaborations, and mentorship. Feel free to reach out!
+            I&apos;m open to internships, collaborations, and mentorship. Feel free to reach out!
           </p>
         </div>
 
@@ -78,7 +55,7 @@ const ContactSection = () => {
           {/* Adjusted width for centering, using max-w-lg for a reasonable size */}
           <div className={`space-y-8 w-full max-w-lg ${contactInView ? "animate-fade-in-up" : "opacity-0"}`}> {/* Changed animation to fade-in-up for single block */}
             <div className="p-6 md:p-8 bg-[#2A2A80] rounded-xl shadow-lg text-center">
-              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">Let's Connect Directly</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">Let&apos;s Connect Directly</h3>
               {/* Added justify-center to center the grid items */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 justify-center">
                 <div className="bg-[#191970] p-4 md:p-6 rounded-lg shadow-md">
@@ -131,7 +108,7 @@ const ContactSection = () => {
                   <Twitter className="w-6 h-6 md:w-8 md:h-8" />
                 </a>
               </div>
-              <p className="text-xs md:text-sm text-gray-400 mt-4 md:mt-6">I'll get back to you as soon as possible!</p>
+              <p className="text-xs md:text-sm text-gray-400 mt-4 md:mt-6">I&apos;ll get back to you as soon as possible!</p>
             </div>
           </div>
         </div>

@@ -4,14 +4,16 @@ import { useState } from "react"
 import { ExternalLink } from "lucide-react"
 import { useInView } from "@/hooks/animations"
 
+type TabType = "experience" | "education" | "certifications";
+
 const ExperienceSection = () => {
   const [experienceInViewRef, experienceInView] = useInView(0.3)
-  const [activeTab, setActiveTab] = useState<"experience" | "education" | "certifications">("experience")
+  const [activeTab, setActiveTab] = useState<TabType>("experience")
 
   const tabs = [
-    { id: "experience", label: "Experience" },
-    { id: "education", label: "Education" },
-    { id: "certifications", label: "Certifications" },
+    { id: "experience" as const, label: "Experience" },
+    { id: "education" as const, label: "Education" },
+    { id: "certifications" as const, label: "Certifications" },
   ]
 
   return (
@@ -29,7 +31,7 @@ const ExperienceSection = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id)}
               className={`px-4 md:px-6 py-2 rounded-full font-semibold text-sm md:text-lg transition-colors duration-200 ${activeTab === tab.id
                 ? "bg-[#FFA500] text-white"
                 : "bg-white text-[#FFA500] border border-[#FFA500] hover:bg-orange-100"
