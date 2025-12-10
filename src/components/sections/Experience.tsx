@@ -7,10 +7,8 @@ import { portfolioContent } from "@/config/content"
 import { useInView } from "@/hooks/useScrollAnimation"
 import { useTheme } from "@/providers/ThemeProvider"
 import { cn } from "@/utils/classNames"
-import ExperienceCard from "@/components/ui/ExperienceCard"
 import ExperienceTimeline from "@/components/ui/ExperienceTimeline"
 import Card from "@/components/ui/Card"
-import { Education, Certification } from "@/types/portfolio"
 
 type TabType = "experience" | "education" | "certifications"
 

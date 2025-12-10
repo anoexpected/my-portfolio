@@ -1,17 +1,16 @@
 'use client';
 
 import YouTubeEmbed from '@/components/ui/YouTubeEmbed';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { portfolioContent } from '@/config/content';
 import { useTheme } from '@/providers/ThemeProvider';
 import { cn } from '@/utils/classNames';
-import { ExternalLink, Calendar, CheckCircle2, Lightbulb, Target } from 'lucide-react';
+import { ExternalLink, CheckCircle2, Lightbulb, Target } from 'lucide-react';
 
 export default function ProjectDetailPage() {
   const params = useParams();
-  const router = useRouter();
   const { theme } = useTheme();
   const projectId = params.id as string;
   const project = portfolioContent.projects.find(p => p.id === projectId);
@@ -1196,7 +1195,7 @@ export default function ProjectDetailPage() {
               </li>
               <li className="flex items-start">
                 <span className={cn("mr-3", theme === 'dark' ? "text-cyan-primary" : "text-cyan-dark")}>•</span>
-                <span><span className={cn("font-semibold", theme === 'dark' ? "text-white" : "text-gray-900")}>Manual processes</span> that waste healthcare workers' time on administrative tasks</span>
+                <span><span className={cn("font-semibold", theme === 'dark' ? "text-white" : "text-gray-900")}>Manual processes</span> that waste healthcare workers&apos; time on administrative tasks</span>
               </li>
             </ul>
             

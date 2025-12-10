@@ -9,7 +9,7 @@ import { cn } from "@/utils/classNames"
 
 const About: FC = () => {
   const { theme } = useTheme()
-  const [aboutInViewRef, aboutInView] = useInView(0.3)
+  const [aboutInViewRef] = useInView(0.3)
 
   return (
     <section

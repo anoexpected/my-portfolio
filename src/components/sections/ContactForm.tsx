@@ -78,7 +78,7 @@ const ContactForm: FC = () => {
         setStatus("error")
         setTimeout(() => setStatus("idle"), 5000)
       }
-    } catch (error) {
+    } catch {
       // If API endpoint doesn't exist, show success message anyway (for demo)
       setStatus("success")
       setFormData({ name: "", email: "", subject: "", message: "" })

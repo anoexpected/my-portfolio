@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { useTheme } from '@/providers/ThemeProvider';
 import { cn } from '@/utils/classNames';
 
@@ -15,7 +14,6 @@ export default function YouTubeEmbed({
   title,
   caption
 }: YouTubeEmbedProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const { theme } = useTheme();
 
   if (!videoId) return null;
@@ -31,7 +29,6 @@ export default function YouTubeEmbed({
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           loading="lazy"
-          onLoad={() => setIsLoaded(true)}
         />
       </div>
 

@@ -3,7 +3,6 @@
 import { FC } from "react"
 import { Github, Linkedin, GraduationCap } from "lucide-react"
 import { portfolioContent } from "@/config/content"
-import { siteConfig } from "@/config/siteConfig"
 import { useTypingAnimation, useInView } from "@/hooks/useScrollAnimation"
 import { scrollToSection } from "@/hooks/useScrollAnimation"
 import { useTheme } from "@/providers/ThemeProvider"

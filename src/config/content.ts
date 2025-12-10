@@ -3,7 +3,7 @@
  * Single source of truth for all portfolio content
  */
 
-import { Project, Experience, Skill, SocialLink, Personal, About, Certification, Education } from "@/types/portfolio";
+import { Project, Experience, Skill, SocialLink, Personal, About, Certification } from "@/types/portfolio";
 
 export const portfolioContent = {
   personal: {

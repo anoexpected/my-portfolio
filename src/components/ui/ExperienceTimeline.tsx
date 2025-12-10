@@ -35,7 +35,7 @@ const ExperienceTimeline: FC<ExperienceTimelineProps> = ({ items }) => {
 
       {/* Timeline items */}
       <div className="space-y-12">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <div key={item.id} className="pl-0 md:pl-24 relative">
             {/* Timeline dot */}
             <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center hidden md:flex">

@@ -8,12 +8,11 @@ import { cn } from '@/utils/classNames';
 
 interface ProjectCardProps {
   project: Project;
-  index?: number;
   animationDelay?: number;
   inView?: boolean;
 }
 
-export default function ProjectCard({ project, index = 0, animationDelay = 0, inView = true }: ProjectCardProps) {
+export default function ProjectCard({ project, animationDelay = 0, inView = true }: ProjectCardProps) {
   const { theme } = useTheme();
   
   // Get short description (max 1 line, ~50 chars)
