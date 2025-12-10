@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Anotida Expected
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, React, and TypeScript showcasing my work as an AWS-Certified Developer, Software Engineer, and AI Researcher.
 
-First, run the development server:
+## ✨ Features
 
+- 🎨 **Modern Design** - Clean, professional UI with dark/light theme support
+- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
+- ⚡ **Performance** - Built with Next.js 15 for optimal performance and SEO
+- 🎭 **Theme Toggle** - Switch between dark and light modes
+- 📊 **Project Showcase** - Detailed project pages with descriptions, architectures, and demos
+- 💼 **Experience Timeline** - Visual timeline of professional experience
+- 🛠️ **Skills Section** - Comprehensive skills showcase
+- 📧 **Contact Form** - Easy way to get in touch
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom components with Lucide React icons
+- **Deployment**: Vercel (recommended)
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/anoexpected/my-portfolio.git
+cd my-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+my-portfolio/
+├── app/                    # Next.js app router pages
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   └── projects/          # Dynamic project pages
+├── public/                # Static assets
+│   └── images/            # Image files
+├── src/
+│   ├── components/        # React components
+│   │   ├── common/        # Shared components (Navbar, Footer)
+│   │   ├── sections/      # Page sections
+│   │   └── ui/            # Reusable UI components
+│   ├── config/            # Configuration files
+│   │   ├── colors.ts      # Color palette
+│   │   ├── content.ts     # Portfolio content
+│   │   └── siteConfig.ts  # Site metadata
+│   ├── hooks/             # Custom React hooks
+│   ├── providers/         # Context providers
+│   ├── styles/            # Global styles and animations
+│   ├── types/             # TypeScript type definitions
+│   └── utils/             # Utility functions
+└── package.json
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All portfolio content is centralized in `src/config/content.ts`. Edit this file to update:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Personal information
+- Projects
+- Work experience
+- Skills
+- Social links
 
-## Deploy on Vercel
+### Update Colors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `src/config/colors.ts` to customize the color scheme.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Add a New Project
+
+1. Open `src/config/content.ts`
+2. Add a new project object to the `projects` array
+3. Add project image to `public/images/`
+4. The project will automatically appear on the projects page
+
+## 🚢 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com)
+3. Vercel will automatically detect Next.js and deploy
+
+### Other Platforms
+
+This portfolio can be deployed to any platform that supports Next.js:
+
+- Netlify
+- AWS Amplify
+- Railway
+- Docker containers
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Anotida Expected**
+
+- GitHub: [@anoexpected](https://github.com/anoexpected)
+- LinkedIn: [Anotida Expected](https://linkedin.com/in/anoexpected)
+- Email: anoexpected@gmail.com
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org)
+- Icons by [Lucide](https://lucide.dev)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
