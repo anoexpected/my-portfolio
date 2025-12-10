@@ -2196,18 +2196,39 @@ export default function ProjectDetailPage() {
                       Challenges
                     </h3>
                     <ul className="space-y-3">
-                      {project.challenges.map((challenge, idx) => (
-                        <li key={idx} className={cn(
-                          "flex items-start gap-3",
-                          theme === 'dark' ? "text-text-secondary-dark" : "text-text-secondary-light"
-                        )}>
-                          <span className={cn(
-                            "mt-1 flex-shrink-0 w-2 h-2 rounded-full",
-                            theme === 'dark' ? "bg-cyan-primary" : "bg-cyan-dark"
-                          )} />
-                          <span>{challenge}</span>
-                        </li>
-                      ))}
+                      {project.challenges.map((challenge, idx) => {
+                        if (typeof challenge === 'string') {
+                          return (
+                            <li key={idx} className={cn(
+                              "flex items-start gap-3",
+                              theme === 'dark' ? "text-text-secondary-dark" : "text-text-secondary-light"
+                            )}>
+                              <span className={cn(
+                                "mt-1 flex-shrink-0 w-2 h-2 rounded-full",
+                                theme === 'dark' ? "bg-cyan-primary" : "bg-cyan-dark"
+                              )} />
+                              <span>{challenge}</span>
+                            </li>
+                          );
+                        }
+                        return (
+                          <li key={idx} className={cn(
+                            "flex items-start gap-3",
+                            theme === 'dark' ? "text-text-secondary-dark" : "text-text-secondary-light"
+                          )}>
+                            <span className={cn(
+                              "mt-1 flex-shrink-0 w-2 h-2 rounded-full",
+                              theme === 'dark' ? "bg-cyan-primary" : "bg-cyan-dark"
+                            )} />
+                            <div>
+                              <span className={cn("font-semibold", theme === 'dark' ? "text-white" : "text-gray-900")}>
+                                {challenge.title}:
+                              </span>{' '}
+                              {challenge.challenge}
+                            </div>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </section>
                 )}

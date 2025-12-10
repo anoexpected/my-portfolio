@@ -35,7 +35,6 @@ export const colors = {
     // Legacy support (maps to dark mode for backward compatibility)
     primary: "#F4F4F4",
     secondary: "#CBD5E1",
-    dark: "#1E293B",
     muted: "#94a3b8",
     white: "#FFFFFF",
   },

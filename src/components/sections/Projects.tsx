@@ -51,7 +51,6 @@ const Projects: FC = () => {
             <ProjectCard
               key={project.id}
               project={project}
-              index={index}
               animationDelay={index * 100}
               inView={projectsInView}
             />

@@ -11,9 +11,9 @@ import { useState, useEffect, useRef } from "react"
 export const useInView = (
   threshold: number = 0.1,
   rootMargin: string = "0px"
-): [React.RefObject<HTMLDivElement>, boolean] => {
+): [React.RefObject<HTMLDivElement | null>, boolean] => {
   const [isInView, setIsInView] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
