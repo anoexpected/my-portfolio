@@ -13,7 +13,7 @@ export const portfolioContent = {
     location: "India",
     email: "anoexpected@gmail.com",
     phone: "+91 9704442804",
-    cvUrl: "https://drive.google.com/file/d/1-C1EBAqnjyfdKDoJxX-rPuF3B-xnBlep/view?usp=sharing",
+    cvUrl: "https://drive.google.com/file/d/1IPIKBX1J5ttHhSm4l_tbsOhsr2BfBk95/view?usp=sharing",
     profileImage: "/images/ano-profile.jpg",
   } as Personal,
 
