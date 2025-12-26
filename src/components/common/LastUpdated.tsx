@@ -23,7 +23,7 @@ export default function LastUpdated() {
   }, []);
 
   // Manual last update date - update this when you make changes to the portfolio
-  const lastUpdatedDate = '10/12/2025';
+  const lastUpdatedDate = '26/12/2025';
 
   // Format time string
   const timeString = currentTime

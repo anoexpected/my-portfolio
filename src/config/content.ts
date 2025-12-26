@@ -20,7 +20,7 @@ export const portfolioContent = {
   about: {
     summary: "",
     education: {
-      university: "Aditya College of Engineering and Technology",
+      university: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
       degree: "Bachelor of Computer Science and Engineering",
       cgpa: "8.17",
       graduationDate: "August 2026",
@@ -475,7 +475,7 @@ export const portfolioContent = {
   education: [
     {
       id: "aditya-college",
-      institution: "Aditya College of Engineering and Technology",
+      institution: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
       degree: "Bachelor of Computer Science and Engineering",
       cgpa: "8.17",
       startDate: undefined,

@@ -95,7 +95,7 @@ const About: FC = () => {
                 theme === 'dark' ? "text-[#94a3b8]" : "text-[#475569]"
               )}
             >
-              I&apos;ve worked on projects ranging from AI-powered applications to scalable web platforms, focusing on creating elegant solutions to complex problems. Final-year student at Aditya College of Engineering and Technology, graduating August 2026.
+              I&apos;ve worked on projects ranging from AI-powered applications to scalable web platforms, focusing on creating elegant solutions to complex problems. Final-year student at Jawaharlal Nehru Technological University, Kakinada (JNTUK), graduating August 2026.
             </p>
           </div>
         </div>
