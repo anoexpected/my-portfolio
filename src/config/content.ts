@@ -223,7 +223,7 @@ export const portfolioContent = {
       shortDescription: "Advanced healthcare platform streamlining patient registration, appointments, and doctor-patient communication",
       description: "Advanced healthcare platform streamlining patient registration, appointments, and doctor-patient communication",
       technologies: ["Next.js", "IBM Watson X", "Watson Assistant", "Django", "MySQL", "React", "Tailwind CSS"],
-      image: "https://camo.githubusercontent.com/abba7f374bced0adb2a620223a51b0cd9d857dcc124801b08bc45da4f658f92a/68747470733a2f2f6d65646c696e6b2e676b2e682e63772e636f2e6b652f6d65646c696e6b2d696d616765732f64617368626f6172642e706e67",
+      image: "/images/medlink.jpg",
       link: "https://medlink.gk.h.cw.co.ke/",
       liveUrl: "https://medlink.gk.h.cw.co.ke/",
       github: "https://github.com/codewavechasers/Medlink",
