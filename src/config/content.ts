@@ -23,7 +23,7 @@ export const portfolioContent = {
       university: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
       degree: "Bachelor of Computer Science and Engineering",
       cgpa: "8.17",
-      graduationDate: "August 2026",
+      graduationDate: "June 2026",
       location: "Andhra Pradesh, India",
       highSchool: {
         name: "Fletcher High School",
@@ -481,7 +481,7 @@ export const portfolioContent = {
       startDate: undefined,
       endDate: "2026-08",
       location: "Andhra Pradesh, India",
-      description: "Expected Graduation August 2026",
+      description: "Expected Graduation June 2026",
     },
     {
       id: "fletcher-high",
